@@ -23,15 +23,16 @@ function tabpatentActive(element, tabContentId) {
 (function () {
   const tableConfigs = {
     table1: {
-      columns: [
-        { name: "col1", type: "datepicker", placeholder: "Receive Date" },
-        { name: "col2", type: "datepicker", placeholder: "Guideline Date" },
-        { name: "col3", type: "datepicker", placeholder: "Untill Date" },
-        { name: "col4", type: "input", placeholder: "About" },
-        { name: "col5", type: "input", placeholder: "Description" },
-        { name: "col6", type: "file", placeholder: "Document" },
-      ],
-    },
+            columns: [
+                { name: 'c_receive_date', type: 'datepicker', placeholder: 'Receive Date' },
+                { name: 'c_guideline_date', type: 'datepicker', placeholder: 'Guideline Date' },
+                { name: 'c_until_date', type: 'datepicker', placeholder: 'Untill Date' },
+                { name: 'c_about', type: 'input', placeholder: 'About' },
+                { name: 'c_description', type: 'input', placeholder: 'Description' },
+                { name: 'c_document', type: 'file', placeholder: 'Document' },
+				{ name: 'actions', type: 'actions' }
+            ]
+        },
     table2: {
       columns: [
         {
@@ -87,63 +88,29 @@ function tabpatentActive(element, tabContentId) {
       ],
     },
     table4: {
-      columns: [
-        { name: "priorityno", type: "input", placeholder: "Priority No." },
-        {
-          name: "prioritydate",
-          type: "datepicker",
-          placeholder: "Priority Date",
+            columns: [
+                { name: 'c_priority_no', type: 'input', placeholder: 'Priority No.' },
+                { name: 'c_priority_date', type: 'datepicker', placeholder: 'Priority Date' },
+                { name: 'c_country', type: 'select', options: ['Applicant', 'Samsung Ltd', '-'] }, 
+                { name: 'c_receiving_doc', type: 'input', placeholder: 'Receiving Doc.' },
+                { name: 'c_sending_doc', type: 'input', placeholder: 'Sending Doc.' },
+                { name: 'c_active', type: 'checkbox', label: '' },
+				{ name: 'actions', type: 'actions' }
+            ]
         },
-        {
-          name: "country",
-          type: "select",
-          options: [
-            { id: 1, text: "Applicant" },
-            { id: 2, text: "Samsung Ltd" },
-            { id: 3, text: "-" },
-          ],
-        },
-        { name: "receivingdoc", type: "input", placeholder: "Receiving Doc." },
-        { name: "sendingdoc", type: "input", placeholder: "Sending Doc." },
-        { name: "active", type: "checkbox", label: "" },
-      ],
-    },
     table5: {
-      columns: [
-        { name: "inventorname", type: "input", placeholder: "Inventor Name" },
-        {
-          name: "citizenship",
-          type: "select",
-          options: [
-            { id: 1, text: "Citizenship" },
-            { id: 2, text: "New York" },
-            { id: 3, text: "-" },
-          ],
+            columns: [
+                { name: 'inventorname', type: 'input', placeholder: 'Inventor Name' },
+                { name: 'citizenship', type: 'select', options: ['Citizenship', 'New York ', '-']},
+                { name: 'address', type: 'input', placeholder: 'Address' }, 
+                { name: 'rssignment', type: 'datepicker', placeholder: 'Receiving Assignment' },
+                { name: 'rtatement', type: 'datepicker', placeholder: 'Receiving Statement' },
+                { name: 'sssignment', type: 'datepicker', placeholder: 'Sending Assignment' },
+                { name: 'sstatement', type: 'datepicker', placeholder: 'Sending Statement' },
+                { name: 'active', type: 'checkbox', label: '' },
+				{ name: 'actions', type: 'actions' }
+            ]
         },
-        { name: "address", type: "input", placeholder: "Address" },
-        {
-          name: "rssignment",
-          type: "datepicker",
-          placeholder: "Receiving Assignment",
-        },
-        {
-          name: "rtatement",
-          type: "datepicker",
-          placeholder: "Receiving Statement",
-        },
-        {
-          name: "sssignment",
-          type: "datepicker",
-          placeholder: "Sending Assignment",
-        },
-        {
-          name: "sstatement",
-          type: "datepicker",
-          placeholder: "Sending Statement",
-        },
-        { name: "active", type: "checkbox", label: "" },
-      ],
-    },
     table7: {
       columns: [
         { name: "date", type: "datepicker", placeholder: "Date" },
@@ -414,7 +381,11 @@ function tabpatentActive(element, tabContentId) {
           td.innerHTML = `<input type="date" class="${column.name}" name="${column.name}" placeholder="${column.placeholder}" required>`;
         } else if (column.type === "file") {
           td.innerHTML = `<input type="file" class="${column.name}" name="${column.name}" required>`;
-        }
+        } else if (column.type === 'actions') {
+          td.innerHTML = `
+           <button type="button" class="btn btn-secondary cancelAddRowButton" onClick="this.closest('tr').remove(); hideSubmitButton('${tableId}')">Cancel</button>
+        `;
+            }
         formRow.appendChild(td);
       });
 
