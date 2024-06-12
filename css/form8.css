@@ -629,9 +629,6 @@ body input.no-manual-input{
 .grid table {
     width: 100%;
 }
-.grid table td{
-    vertical-align: top;
-}
 .grid table th, .grid table td {
     border-top: 1px solid #ced4da !important;
     border-bottom: 1px solid #ced4da;
@@ -1282,13 +1279,4 @@ body.popupBody .form-section:first-of-type {
         margin-top: 20px !important;
         padding-top: 0px !important;
     }
-}
-
-body.rtl .form-container [class*=form-cell-value]{
-    float: right;
-}
-
-body.rtl .ui-html.ql-editor,
-body.rtl table:not(.ui-datepicker-calendar) * {
-    text-align: right;
 }
