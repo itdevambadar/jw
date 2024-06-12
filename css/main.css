@@ -873,7 +873,7 @@ ul.header-tasks:last-child {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  background: #f5f6fa;
+  background: #ffffff;;
   min-height: calc(100vh - 240px); }
   .content-wrapper.fixed-height {
     height: calc(100vh - 240px);
@@ -2996,7 +2996,7 @@ table.projects-table {
         position: absolute;
         top: 4px;
         left: -10px;
-        color: #0B60B0; }
+        color: #0bb063; }
         .todo-container .todo-body li.todo-list .dot:before {
           font-size: 1.2rem;
           content: "\e836";
@@ -5632,9 +5632,16 @@ label {
     -moz-border-radius: 0px;
     border-radius: 0px;
     border-top: 1px solid transparent; }
+
+    .nav-tabs .nav-item .nav-link:hover {
+      background-color: #f53b3b !important;
+      color: whitesmoke !important;
+    }
+
     .nav-tabs .nav-item .nav-link i {
       font-size: 1rem;
-      margin: 0 .3rem 0 0; }
+      margin: 0 .3rem 0 0;
+    }
       .nav-tabs .nav-item .nav-link i.block {
         display: block;
         text-align: center;
