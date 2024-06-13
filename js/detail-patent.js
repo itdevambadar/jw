@@ -25,12 +25,13 @@
     const tableConfigs = {
         table1: {
             columns: [
-                { name: 'col1', type: 'datepicker', placeholder: 'Receive Date' },
-                { name: 'col2', type: 'datepicker', placeholder: 'Guideline Date' },
-                { name: 'col3', type: 'datepicker', placeholder: 'Untill Date' },
-                { name: 'col4', type: 'input', placeholder: 'About' },
-                { name: 'col5', type: 'input', placeholder: 'Description' },
-                { name: 'col6', type: 'file', placeholder: 'Document' }
+                { name: 'c_receive_date', type: 'datepicker', placeholder: 'Receive Date' },
+                { name: 'c_guideline_date', type: 'datepicker', placeholder: 'Guideline Date' },
+                { name: 'c_until_date', type: 'datepicker', placeholder: 'Untill Date' },
+                { name: 'c_about', type: 'input', placeholder: 'About' },
+                { name: 'c_description', type: 'input', placeholder: 'Description' },
+                { name: 'c_document', type: 'file', placeholder: 'Document' },
+				{ name: 'actions', type: 'actions' }
             ]
         },
         table2: {
