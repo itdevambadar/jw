@@ -1,0 +1,29 @@
+.process_status_dl_container {position: relative; width: 100px;}
+.process_status_dl_container.ready {cursor: pointer;}
+.process_status_dl_container.show .blockui {width:100vw; height: 100vh; position: fixed; top:0; left:0; z-index: 99998; background: #000; opacity: 0.5;}
+.process_status_dl_container.show .ps_progress_container .progress_bar, .process_status_dl_container.show .ps_iframe_container {z-index: 99999;}
+.process_status_dl_container.show .ps_progress_container .progress_bar {border: 1px solid #fff;}
+.process_status_dl_container.show .ps_iframe_container {display: block !important;}
+.ps_progress_container {position: relative; width: 100px; height: 20px; display: inline-block;}
+.ps_progress_container .progress_bar {position: absolute; top:0px; left:0px; width: 100px; height: 20px; background: #eee;}
+.ps_progress_container .progress_bar .bar_label {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); color: #000;}
+.ps_progress_container .progress_bar.revert .bar_label{color: #fff;}
+.ps_progress_container .progress_bar .bar {position: absolute; top:0; bottom:0; left:0; background: #43a047;}
+.ps_progress_container .progress_bar.aborted {background: #f2dede;}
+.ps_progress_container .progress_bar.aborted .bar {background: #a94442;}
+.ps_iframe_container {display: none; position: absolute; right: 0px; background: #fff; margin-top: 10px; width: 400px; height: 400px;}
+.ps_iframe_container:before {content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid #fff; position: absolute; right: 45px; top: -10px;}
+.ps_iframe_container iframe {width: 100%; height: 100%; border: 0;}
+.ps_iframe_container.left {left: 0px}
+.ps_iframe_container.left:before {left: 45px;}
+@media only screen and (min-device-width : 331px) and (max-device-width: 500px) {
+  .ps_iframe_container {display: none; position: absolute; right: 0px; background: #fff; margin-top: 10px; width: 330px; height: 400px;}
+  .ps_iframe_container.left {left: -105px}
+  .ps_iframe_container.left:before {left: 150px;}
+}
+
+@media only screen and (max-device-width: 330px) {
+  .ps_iframe_container {display: none; position: absolute; right: 0px; background: #fff; margin-top: 10px; width: 300px; height: 400px;}
+  .ps_iframe_container.left {left: -120px}
+  .ps_iframe_container.left:before {left: 160px;}
+}
