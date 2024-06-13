@@ -51,11 +51,6 @@ $(function() {
 
 
 
-// Loading
-$(function() {
-	$("#loading-wrapper").fadeOut(3000);
-});
-
 
 
 // Textarea characters left
