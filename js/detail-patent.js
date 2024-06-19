@@ -96,12 +96,12 @@
                 { name: 'reason', type: 'input', placeholder: 'Reason/Note' },
                 { name: 'translator', type: 'select', options: ['Translator', 'Sahat Manihuruk', '-']},
                 { name: 'sendate', type: 'datepicker', placeholder: 'Sent Date' },
-                { name: 'remark', type: 'input', placeholder: 'Day Limit' },
-                { name: 'sendate', type: 'datepicker', placeholder: 'Deadline Date' },
-                { name: 'docdate', type: 'datepicker', placeholder: 'Received Date' },
-                { name: 'docdate', type: 'datepicker', placeholder: 'Paid Date' },
+                { name: 'day_limit', type: 'input', placeholder: 'Day Limit' },
+                { name: 'deadline_date', type: 'datepicker', placeholder: 'Deadline Date' },
+                { name: 'received_Date', type: 'datepicker', placeholder: 'Received Date' },
+                { name: 'paid_date', type: 'datepicker', placeholder: 'Paid Date' },
                 { name: 'remark', type: 'input', placeholder: 'Total Payment' },
-                { name: 'remark', type: 'input', placeholder: 'Note' },
+                { name: 'note', type: 'input', placeholder: 'Note' },
                 
             ]
         },
@@ -113,10 +113,35 @@
                 { name: 'englishspec', type: 'checkbox', label: '' },
                 { name: 'waitfinalins', type: 'checkbox', label: '' },
                 { name: 'statusprocess', type: 'checkbox', label: '' },
-                { name: 'dispodatte', type: 'input', placeholder: 'Disposition Date' , readonly: true},
+                { name: 'dispodatte', type: 'datepicker', placeholder: 'Disposition Date' , readonly: true},
                 { name: 'dispostaff', type: 'input', placeholder: 'Disposition Staff' , readonly: true},
                 { name: 'cancelins', type: 'datepicker', placeholder: 'Deadline Date' },
                 
+                
+            ]
+        },
+        table20: {
+            columns: [
+                { name: 'acceptance_date', type: 'datepicker', placeholder: 'Acceptance Date' },
+                { name: 'received_date', type: 'datepicker', placeholder: 'Received Date' },
+                { name: 'publication_date', type: 'datepicker', placeholder: 'Publication Date' },
+                { name: 'publication_no', type: 'input', placeholder: 'Publication No' },
+                { name: 'signing_name', type: 'input', placeholder: 'Signing Name' },
+                { name: 'send_date_client', type: 'datepicker', placeholder: 'Send Date Client'},
+            ]
+        },
+        table22: {
+            columns: [
+                { name: 'mail_subject', type: 'input', placeholder: 'Mail Subject' },
+                { name: 'examiner_name', type: 'input', placeholder: 'Examiner Name' },
+                { name: 'mail_date', type: 'datepicker', placeholder: 'Mail Date' },
+                { name: 'limit', type: 'input', placeholder: 'Limit' },
+                { name: 'deadline_date', type: 'datepicker', placeholder: 'Deadline Date' },
+                { name: 'filing_eot', type: 'input', placeholder: 'Filing EOT' },
+                { name: 'limit_eot', type: 'input', placeholder: 'Limit EOT' },
+                { name: 'new_deadline_date', type: 'datepicker', placeholder: 'New Deadline Date' },
+                { name: 'instruction_date', type: 'datepicker', placeholder: 'Instruction Date' },
+                { name: 'filing_response', type: 'input', placeholder: 'Filing Response' },
                 
             ]
         },
