@@ -76,18 +76,18 @@
         },
         table7: {
             columns: [
-                { name: 'date', type: 'datepicker', placeholder: 'Date' },
-                { name: 'from', type: 'select', options: ['From', 'Specialist PPD', 'Finance']},
+                { name: 'dateremark', type: 'datepicker', placeholder: 'Date' },
+                { name: 'fromremark', type: 'select', options: ['From', 'Specialist PPD', 'Finance']},
                 { name: 'remark', type: 'input', placeholder: 'Remark' },
             ]
         },
         table8: {
             columns: [
-                { name: 'applicant', type: 'select', options: ['Applicant', 'LG Electronic', '-']},
+                { name: 'appstatdoc', type: 'select', options: ['Applicant', 'LG Electronic', '-']},
                 { name: 'docname', type: 'select', options: ['Document Name', 'POA']},
                 { name: 'docdate', type: 'datepicker', placeholder: 'Document Date' },
                 { name: 'recdate', type: 'datepicker', placeholder: 'Received Date' },
-                { name: 'status', type: 'select', options: ['Status', 'Complete']},
+                { name: 'statudoc', type: 'select', options: ['Status', 'Complete']},
             ]
         },
         table10: {

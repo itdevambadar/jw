@@ -9,6 +9,7 @@
 							A2. Importing Web Fonts
 	************************************************
 ************************************************/
+@import url("../css");
 /************************************************
 	************************************************
 											Body Css							
@@ -2995,7 +2996,7 @@ table.projects-table {
         position: absolute;
         top: 4px;
         left: -10px;
-        color: #0bb063; }
+        color: #0B60B0; }
         .todo-container .todo-body li.todo-list .dot:before {
           font-size: 1.2rem;
           content: "\e836";

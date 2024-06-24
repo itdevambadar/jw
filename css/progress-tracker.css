@@ -49,7 +49,7 @@
   top: 10px;
   right: -12px;
   width: 100%;
-  height: 4px;
+  height: 1px;
   transition: background-color 0.3s, background-position 0.3s;
 }
 
@@ -68,22 +68,23 @@
   color: #fff;
 }
 .progress-step .progress-marker::before {
-  background-color: #b6b6b6;
+	background-color: #ffffff;
+	border: 4px solid #0B60B0;
 }
 .progress-step .progress-marker::after {
-  background-color: #b6b6b6;
+  background-color: #cccccc;
 }
 .progress-step .progress-text {
   color: #333;
 }
 .progress-step.is-active .progress-marker::before {
-  background-color: #2196F3;
+  background-color: #0B60B0;
 }
 .progress-step.is-complete .progress-marker::before, .progress-step.is-progress .progress-marker::before {
-  background-color: #1976D2;
+  background-color: #0B60B0;
 }
 .progress-step.is-complete .progress-marker::after, .progress-step.is-progress .progress-marker::after {
-  background-color: #868686;
+  background-color: #0B60B0;
 }
 .progress-step.is-progress-10 .progress-marker::after {
   background-image: linear-gradient(to right, #868686 10%, #b6b6b6 10%);
@@ -112,9 +113,9 @@
 .progress-step.is-progress-90 .progress-marker::after {
   background-image: linear-gradient(to right, #868686 90%, #b6b6b6 90%);
 }
-.progress-step:hover .progress-marker::before {
-  background-color: #56ADF5;
-}
+/*.progress-step:hover .progress-marker::before {
+  background-color: #0B60B0;
+}*/
 .progress-tracker--text .progress-step:last-child, .progress-tracker--center .progress-step:last-child, .progress-tracker--right .progress-step:last-child {
   flex-grow: 1;
 }
@@ -464,9 +465,52 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #2196F3; /* Change color as needed */
+  background-color: #0B60B0; /* Change color as needed */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+    .highcharts-figure,
+.highcharts-data-table table {
+    min-width: 360px;
+    max-width: 100%;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
 }
