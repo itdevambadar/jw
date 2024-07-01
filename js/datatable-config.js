@@ -249,6 +249,7 @@ $(function(){
     });
     $('#table24').DataTable( {
         dom: 'Bfrtip',
+        responsive: true,
         buttons: [
             'copyHtml5',
             'excelHtml5',
@@ -257,6 +258,9 @@ $(function(){
             'print'
         ],
         'iDisplayLength': 20,
+        columnDefs: [
+            { responsivePriority: 1, targets: -2 }
+        ]
     });
     $('#table25').DataTable( {
         dom: 'Bfrtip',
@@ -369,3 +373,4 @@ $(function(){
         'iDisplayLength': 20,
     });
 });
+
