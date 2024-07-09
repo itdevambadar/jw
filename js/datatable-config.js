@@ -372,5 +372,27 @@ $(function(){
         ],
         'iDisplayLength': 20,
     });
+    $('#table5Change').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+            'print'
+        ],
+        'iDisplayLength': 20,
+    });
+    $('#table36').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+            'print'
+        ],
+        'iDisplayLength': 20,
+    });
 });
 
