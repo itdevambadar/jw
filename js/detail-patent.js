@@ -19,6 +19,29 @@
     document.getElementById(tabContentId).classList.add('active');
 }
 
+document.getElementById('toggle-edit-btn').addEventListener('click', function () {
+    var cells = document.getElementsByClassName('masukan');
+    for (var i = 0; i < cells.length; i++) {
+        var content = cells[i].innerHTML.trim();
+        if (content === '<p>-</p>' || cells[i].querySelector('p') !== null) {
+            if (cells[i].id === 'apply_date' || cells[i].id === 'filing_report') {
+                cells[i].innerHTML = '<input type="date" class="" value="" id="' + cells[i].id + '">';
+            } else if (cells[i].id === 'consultant') {
+                cells[i].innerHTML = '<select id="' + cells[i].id + '">' +
+                    '<option value="2">Nadia Ambadar, S.H., M.H.</option>' +
+                    '<option value="3">Anisa Ambadar, SH. LL.M.</option>' +
+                    '<option value="4">Nabila Ambadar, SH. LL.M.</option>' +
+                    '<option value="5">Dora Ambadar, S.Psi</option>' +
+                    '</select>';
+            } else {
+                cells[i].innerHTML = '<input type="text" value="" id="' + cells[i].id + '">';
+            }
+        }
+    }
+    // Inisialisasi datepicker untuk semua elemen input yang baru dibuat
+    $(".datepicker").datepicker();
+});
+
 //tabel dynamis
 //tabel dynamis
 (function() {
