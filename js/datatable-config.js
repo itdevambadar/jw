@@ -29,12 +29,6 @@ $(function(){
             }
         ],
         'iDisplayLength': 20,
-        "initComplete": function(){
-                var api = this.api();
-                api.$('td').on('click', function(){
-                api.search(this.innerHTML).draw();
-            });
-        },
     });
     $('#table2').DataTable( {
         dom: 'Bfrtip',
@@ -1396,4 +1390,5 @@ $(function(){
     });
     
 });
+
 
