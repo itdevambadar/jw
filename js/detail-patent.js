@@ -19,55 +19,6 @@
     document.getElementById(tabContentId).classList.add('active');
 }
 
-document.getElementById('toggle-edit-btn').addEventListener('click', function () {
-    var cells = document.getElementsByClassName('masukan');
-    var id_project = $('#project_id_').val();
-    // Fetch data from the REST API
-    fetch('http://127.0.0.1:8000/patent/patent-filingneworder?id='+id_project) // Replace with your actual API endpoint
-        .then(response => response.json())
-        .then(data => {
-            // Get the first object in the array
-            var firstDataObject = data[0];
-            // document.getElementById('c_statement').checked = true;
-
-            for (const [key, value] of Object.entries(firstDataObject)) {
-                const element = document.getElementById(key);
-                if (element) {
-                    // Set checkbox to true if the value is "1", otherwise set to false
-                    element.checked = value === "1";
-                }
-            }
-
-            for (var i = 0; i < cells.length; i++) {
-                var content = cells[i].innerHTML.trim();
-                if (content === '<p>-</p>' || cells[i].querySelector('p') !== null) {
-                    let value = firstDataObject[cells[i].id] || ''; // Get the value from the API response or use an empty string if not found
-                    
-                    
-                    if (cells[i].id === 'c_apply_date' || cells[i].id === 'c_filing_report') {
-                        cells[i].innerHTML = '<input type="date" class="datepicker" value="' + value.split('T')[0] + '" id="' + cells[i].id + '">'; // Split date-time string to get date only
-                    } else if (cells[i].id === 'c_consultant') {
-                        cells[i].innerHTML = '<select id="' + cells[i].id + '" name="' + cells[i].id + '">' +
-                            '<option value="2" ' + (value === "2" ? 'selected' : '') + '>Nadia Ambadar, S.H., M.H.</option>' +
-                            '<option value="3" ' + (value === "3" ? 'selected' : '') + '>Anisa Ambadar, SH. LL.M.</option>' +
-                            '<option value="4" ' + (value === "4" ? 'selected' : '') + '>Nabila Ambadar, SH. LL.M.</option>' +
-                            '<option value="5" ' + (value === "5" ? 'selected' : '') + '>Dora Ambadar, S.Psi</option>' +
-                            '</select>';
-                    } else if (cells[i].id === 'c_status_doc') {
-                        cells[i].innerHTML = '<select id="' + cells[i].id + '" name="' + cells[i].id + '">' +
-                            '<option value="0" ' + (value === "0" ? 'selected' : '') + '>INCOMPLETE</option>' +
-                            '<option value="1" ' + (value === "1" ? 'selected' : '') + '>COMPLETE</option>' +
-                            '</select>';
-                    } else {
-                        cells[i].innerHTML = '<input type="text" value="' + value + '" id="' + cells[i].id + '">';
-                    }
-                }
-            }
-           
-        })
-        .catch(error => console.error('Error fetching data:', error));
-});
-
 //tabel dynamis
 //tabel dynamis
 (function() {
